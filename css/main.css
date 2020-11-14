@@ -1,1 +1,38 @@
-//New file
+.header{
+    color: #fe0000;
+}
+
+.box{
+    background-color: #0000fe;
+    width: 100px;
+    height: 75px;
+    color: #fff;
+    margin-bottom: 90px;
+}
+
+.code{
+    color: #fe0000;
+}
+h2{
+    background-color: #008001;
+    color: #fff;
+    padding: 5px;
+}
+
+.hdr{
+    padding: 40px;
+    font-size: 1.5em;
+}
+
+.form{
+    margin: 15px 100px;
+}
+
+.frame{
+    margin: 28px 0px;
+}
+
+.list{
+    border: 1px solid #000;
+    font-size: 30px;
+}
