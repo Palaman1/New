@@ -88,17 +88,29 @@ h6{
 }
 
 .header{
+  position: sticky;
+  top: 0;
+  background-color: #01353E;
+  z-index: 99;
+  padding-bottom: 20px;
+}
+
+.menu{
+  margin-bottom: 20px;
+}
+
+.header__home{
   background-image: url(../images/bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 1080px;
+  padding-top: 256px;
 }
 
 .header__top-inner{
   display: flex;
   align-items: flex-end;
-  margin-bottom: 256px;
 }
 
 .logo{
@@ -1023,8 +1035,8 @@ form textarea::placeholder{
     padding-bottom: 60px;
   }
 
-  .teampic{
-    margin: 0 30px;
+  .team__items{
+    column-gap: 30px;
   }
 
   .option__items{
@@ -1038,6 +1050,31 @@ form textarea::placeholder{
 }
 
 @media (max-width: 992px){
+  .header__home{
+    min-height: 886px;
+  }
+
+  .header__top-inner {
+    max-height: 70px;
+  }
+
+  .header__subtitle {
+    margin-bottom: 120px;
+  }
+
+  @keyframe nudge{
+    0%, 100% {
+    transform: translate(0, 0);
+    }
+    50% {
+    transform: translate(0, -10px);
+    }
+
+    80% {
+    transform: translate(0, -30px);
+    }
+  }
+
   .about{
     padding: 0;
   }
@@ -1200,6 +1237,10 @@ form textarea::placeholder{
 
 @media (max-width: 768px){
 
+  .logo {
+    padding-top: 6px;
+  }
+
   .menu__list{
     position: absolute;
     left: 0;
@@ -1295,6 +1336,14 @@ form textarea::placeholder{
 
 @media (max-width: 640px){
 
+  .header__top-inner {
+    max-height: 60px;
+  }
+
+  .logo {
+    padding-top: 12px;
+  }
+
   .container{
     max-width: 640px;
   }
@@ -1305,22 +1354,22 @@ form textarea::placeholder{
 
   .school__items{
     flex-direction: column;
+    align-items: center;
   }
 
   .sitem{
     max-width: 320px;
     margin: 0 auto 50px;
+
   }
 
   .sitem::before {
     padding-left: 76px;
   }
 
-  .stitle{
-    padding-left: 0;
-  }
-
+  .stitle,
   .stext{
+    margin: 0 auto;
     text-align: center;
   }
 
